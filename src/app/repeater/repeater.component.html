@@ -1,9 +1,26 @@
-
 @for (item of options; track $index) {
-  <div>{{ item?.name }}</div>
+<div class="repeat-item">
+  <span>{{$index+1}} Component Repeated {{ item?.name }}</span>
+</div>
+<div class="line-break"></div>
 }
-
-@for (item of values | customSort: ['name', 'id']; track $index) {
-  <div>{{ item.id }}</div>
-  <div>{{ item.name }}</div>
-}
+<div class="line-break"></div>
+<h2>Custom Pipe Data</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  @for (item of values | customSort:['-name', 'id'] ; track $index) {
+  <tr>
+    <td>
+      <span>{{ item.id }}</span>
+    </td>
+    <td>
+      <span>{{ item.name }}</span>
+    </td>
+  </tr>
+  }
+</table>

@@ -6,11 +6,15 @@ import { CustomSortPipe } from '../custom-sort.pipe';
   selector: 'app-repeater',
   imports: [CustomSortPipe],
   templateUrl: './repeater.component.html',
-  styleUrl: './repeater.component.css'
+  styleUrl: './repeater.component.css',
 })
-
-
 export class RepeaterComponent {
   @Input() options?: option[];
-  values = [{id: 45, name: 'Astart'}, {id: 44, name: 'Astart'}, {id: 45, name: 'Bstart'}, {id: 65, name: 'Cstart'}, {id: 44, name: 'Dstart'}];
+  values = [
+    { id: 45, name: 'Astart' },
+    { id: 44, name: 'Astart' },
+    { id: 45, name: 'Bstart' },
+    { id: 65, name: 'Cstart' },
+    { id: 44, name: 'Dstart' },
+  ];
 }
