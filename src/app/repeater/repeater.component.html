@@ -1,0 +1,9 @@
+
+@for (item of options; track $index) {
+  <div>{{ item?.name }}</div>
+}
+
+@for (item of values | customSort: ['name', 'id']; track $index) {
+  <div>{{ item.id }}</div>
+  <div>{{ item.name }}</div>
+}
